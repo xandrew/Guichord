@@ -2,8 +2,6 @@
 
 one:
   name: MyString
-  auth_id: 1
 
 two:
   name: MyString
-  auth_id: 1
