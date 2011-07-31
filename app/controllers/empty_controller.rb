@@ -1,5 +1,5 @@
 class EmptyController < ActionController::Base
   def show
-   @time = "42"
+   @users = User.all
   end
 end

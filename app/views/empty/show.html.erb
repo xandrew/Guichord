@@ -1,2 +1,6 @@
-<p>Nothing really! But will be something with guitar chords. Time is:
-<%= @time %>
+<p>Nothing really! But will be something with guitar chords. Users:
+<ul>
+<% @users.each do |user| %>
+  <li><%= user.name %></li>  
+<% end %>
+</ul>
