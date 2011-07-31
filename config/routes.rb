@@ -1,4 +1,6 @@
 Gtabs::Application.routes.draw do
+  root :to => "Empty#show"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
