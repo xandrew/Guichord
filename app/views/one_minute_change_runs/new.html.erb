@@ -1,0 +1,19 @@
+<h1>Add new one minute change run</h1>
+
+<%= form_for(@one_minute_change_run) do |f| %>
+  <div class="field">
+    <%= f.label :num_changes %><br />
+    <%= f.number_field :num_changes %>
+  </div>
+  <div class="field">
+    <label for="first_chord_name">First chord</label>
+    <input id="first_chord_name" name="first_chord_name" type="text">
+  </div>
+  <div class="field">
+    <label for="second_chord_name">First chord</label>
+    <input id="second_chord_name" name="second_chord_name" type="text">
+  </div>
+  <div class="actions">
+    <%= f.submit "Send" %>
+  </div>
+<% end %>
