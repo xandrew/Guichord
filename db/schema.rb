@@ -10,7 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110801114803) do
+ActiveRecord::Schema.define(:version => 20110801115914) do
+
+  create_table "chord_pairs", :force => true do |t|
+    t.integer  "first_chord_id"
+    t.integer  "second_chord_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "chords", :force => true do |t|
     t.string   "name"
