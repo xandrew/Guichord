@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  first_chord_id: 1
+  second_chord_id: 1
+
+two:
+  first_chord_id: 1
+  second_chord_id: 1
