@@ -1,0 +1,30 @@
+<table>
+<tr>
+<td>Accords</td>
+<td>Max</td>
+<td>Last</td>
+</tr>
+<% @change_stats.each do |item| %>
+<tr>
+<%= form_for(item[:last_run], :url => { :action => "new", :controller => "OneMinuteChangeRuns" }) do |f| %>
+  <%= f.hidden_field :user_id %>
+  <%= f.hidden_field :chord_pair_id %>
+  <td><%= "#{item[:pair].first_chord.name} - #{item[:pair].second_chord.name}" %></td>
+  <td><%= item[:max] %></td>
+  <td><%= item[:last_run].num_changes %> at <%= item[:last_run].created_at %></td>
+  <td><%= f.submit "Add new" %></td>
+  <% end %>
+</tr>
+<% end %>
+</table>
+
+<%= form_for(OneMinuteChangeRun.new(:user_id => @user_id), :url => { :action => "new", :controller => "OneMinuteChangeRuns" }) do |f| %>
+  <%= f.hidden_field :user_id %>
+  <%= fields_for (ChordPair.new) do |pair| %>
+    <%= pair.collection_select :first_chord_id, Chord.all, :id, :name %>
+    <%= pair.collection_select :second_chord_id, Chord.all, :id, :name %>
+  <% end %>
+  <<%= f.submit "Add new" %>
+<% end %>
+
+

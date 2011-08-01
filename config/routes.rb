@@ -3,6 +3,9 @@ Gtabs::Application.routes.draw do
 
   match 'new_change_run' => 'OneMinuteChangeRuns#new'
 
+  match 'status' => 'ListRuns#list'
+
+
   root :to => "Empty#show"
 
   # The priority is based upon order of creation:
