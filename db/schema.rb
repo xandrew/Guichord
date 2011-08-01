@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110801112400) do
+ActiveRecord::Schema.define(:version => 20110801114803) do
 
   create_table "chords", :force => true do |t|
     t.string   "name"
@@ -20,11 +20,10 @@ ActiveRecord::Schema.define(:version => 20110801112400) do
 
   create_table "one_minute_change_runs", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "first_chord_id"
-    t.integer  "second_chord_id"
     t.integer  "num_changes"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "chord_pair_id"
   end
 
   create_table "users", :force => true do |t|
