@@ -1,5 +1,5 @@
 <table>
-<tr>
+<tr class='table-header'>
 <td>Accords</td>
 <td>Max</td>
 <td>Last</td>
@@ -21,10 +21,10 @@
 <%= form_for(OneMinuteChangeRun.new(:user_id => @user_id), :url => { :action => "new", :controller => "OneMinuteChangeRuns" }) do |f| %>
   <%= f.hidden_field :user_id %>
   <%= fields_for (ChordPair.new) do |pair| %>
-    <%= pair.collection_select :first_chord_id, Chord.all, :id, :name %>
-    <%= pair.collection_select :second_chord_id, Chord.all, :id, :name %>
+    <%= pair.collection_select :first_chord_id, Chord.all, :id, :name, {}, :class=>'round' %>
+    <%= pair.collection_select :second_chord_id, Chord.all, :id, :name, {}, :class=>'round' %>
   <% end %>
-  <<%= f.submit "Add new" %>
+  <%= f.submit "Add new" %>
 <% end %>
 
 
