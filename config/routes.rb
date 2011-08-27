@@ -1,4 +1,10 @@
 Gtabs::Application.routes.draw do
+  get "openid_consumer/index"
+
+  get "openid_consumer/start"
+
+  get "openid_consumer/complete"
+
   resources :one_minute_change_runs
 
   match 'new_change_run' => 'OneMinuteChangeRuns#new'
