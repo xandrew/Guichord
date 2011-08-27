@@ -1,0 +1,2 @@
+module OpenidConsumerHelper
+end
